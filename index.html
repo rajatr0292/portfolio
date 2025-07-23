@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Primary Meta Tags -->
+     <title>RAJAT RANA | Web Developer & Automation Expert</title>
+     <meta name="title" content="RAJAT RANA | Web Developer & Automation Expert">
+     <meta name="description" content="I'm a Web Developer with over 5 years of experience in custom module and theme developmen  Explore my portfolio!">
+
+     <!-- Open Graph / Facebook -->
+  
+     <meta property="og:image:width" content="1200">
+     <meta property="og:image:height" content="630">
+     <meta property="og:type" content="website">
+        <meta property="og:title" content="RAJAT RANA | Web Developer & Automation Expert">
+     <!-- Additional Meta Tags -->
+     <meta name="keywords" content="Rajat Rana - Fresher Software Developer with skills in HTML, CSS, JavaScript,">
+     <meta name="author" content="RAJAT RANA">
+     <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/png" href="https://dhruvr99.github.io/portfolio/assets/DR-logo.gif">
+     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .active {
+            color: rgb(190, 172, 33);
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        .dark-mode .menu-item {
+            color: white;
+        }
+
+        .dark-mode .hover\:text-yellow-500:hover {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Fixed Menu -->
+    <header id="top-menu" class="fixed top-0 left-0 w-full bg-transparent z-50 transition-all duration-300">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <button id="menu-toggle" class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a href="#hero" class="flex justify-center md:hidden">
+                <img src="./assets/DR-logo.gif" alt="Logo" class="h-12">
+            </a>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#hero" class="menu-item hover:text-yellow-500">Home</a></li>
+                    <li><a href="#about" class="menu-item hover:text-yellow-500">About Me</a></li>
+                    <li><a href="#skills" class="menu-item hover:text-yellow-500">Skills</a></li>
+                    <li><a href="#contact" class="menu-item hover:text-yellow-500">Contact</a></li>
+                </ul>
+            </nav>
+            <button id="dark-mode-toggle" class=" hover:text-yellow-500"><i id="dark-mode-icon"
+                    class="fas fa-moon text-2xl"></i></button>
+        </div>
+        <div id="mobile-menu" class="hidden flex flex-col space-y-4 p-4 absolute w-full shadow-md md:hidden bg-white">
+            <a href="#hero" class="menu-item hover:text-yellow-500">Home</a>
+            <a href="#about" class="menu-item hover:text-yellow-500">About Me</a>
+            <a href="#skills" class="menu-item hover:text-yellow-500">Skills</a>
+            <a href="#appreciation" class="menu-item hover:text-yellow-500">Appreciation</a>
+            <a href="#faqs" class="menu-item hover:text-yellow-500">FAQs</a>
+            <a href="#contact" class="menu-item hover:text-yellow-500">Contact</a>
+        </div>
+    </header>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        window.addEventListener('scroll', function () {
+            const header = document.getElementById('top-menu');
+            const mobilemenu = document.getElementById('mobile-menu');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            if (window.scrollY > 50) {
+                if (isDarkMode) {
+                    header.classList.add('bg-black');
+                    mobilemenu.classList.add('bg-black');
+                } else {
+                    header.classList.add('bg-white');
+                    mobilemenu.classList.add('bg-white');
+                }
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('bg-black');
+                header.classList.remove('bg-white');
+                header.classList.remove('shadow-lg');
+            }
+        });
+
+        document.getElementById('dark-mode-toggle').addEventListener('click', function () {
+            document.body.classList.toggle('dark-mode');
+            const header = document.getElementById('top-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+            header.classList.remove('bg-black');
+            header.classList.remove('bg-white');
+            mobileMenu.classList.remove('bg-black');
+            mobileMenu.classList.remove('bg-white');
+            header.classList.remove('shadow-lg');
+            if (document.body.classList.contains('dark-mode')) {
+                header.classList.add('bg-black');
+                mobileMenu.classList.add('bg-black');
+            } else {
+                header.classList.add('bg-white');
+            }
+        });
+    </script>
+
+    <!-- Hero Section -->
+    <section id="hero" class="text-center py-20">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="block sm:hidden text-center mt-8">
+                    <h1 class="text-7xl font-extrabold mb-8">RAJAT RANA</h1>
+                    <p class="text-lg">Rajat Rana - Fresher Software Developer with skills in HTML, CSS, JavaScript,</p>
+                    <div class="mt-8 flex justify-center space-x-6">
+                        <a href="https://www.linkedin.com/in/rajat-rana-2331b21b4"
+                            class="text-yellow-500 hover:text-yellow" target="_blank">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                        <a href="https://github.com/dhruvr99" class="text-yellow-500 hover:text-yellow" target="_blank">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>
+                        <a href="https://x.com/DhruvRana84" target="_blank" class="text-yellow-500 hover:text-yellow">
+                            <i class="fab fa-x-twitter text-3xl"></i>
+                        </a>
+                    </div>
+                    <a href="mailto:dhruvrana841999@gmail.com" class="text-yellow-500 hover:text-yellow">
+                        <button
+                            class="border border-yellow-500 text-yellow-500 hover:text-white hover:bg-yellow-500 py-2 px-4 rounded-full mt-4">
+                            Contact me
+                        </button>
+                    </a>
+                </div>
+                <div class="relative flex justify-center">
+                    <img class="w-full h-auto rounded-lg shadow-lg object-cover" src="./assets/linkdin.jpeg"
+                        alt="Hero Image">
+                    <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
+                </div>
+                <div class="hidden sm:block text-center mt-8">
+                    <h1 class="text-7xl font-extrabold mb-8">RAJAT RANA</h1>
+                    <p class="text-lg"> Software Developer with skills in HTML, CSS, JavaScript,</p>
+                    <div class="mt-8 flex justify-center space-x-6">
+                        <a href="https://www.linkedin.com/in/rajat-rana-2331b21b4"
+                            class="text-yellow-500 hover:text-yellow" target="_blank">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                        <a href="https://github.com/rajatr0292" class="text-yellow-500 hover:text-yellow" target="_blank">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>
+                       
+                    </div>
+                    <button   
+                            class="border border-yellow-500 text-yellow-500 hover:text-white hover:bg-yellow-500 py-2 px-4 rounded-full mt-4">
+                            Contact me
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+  <div id="about" class="max-w-2xl mx-auto p-6 bg-transparent rounded-xl py-20 text-center">
+        <h2 class="text-7xl font-extrabold mb-8">About Me</h2>
+    <p>
+      Hello! I am <strong>Rajat Rana</strong>, a passionate and dedicated graduate in B.Voc (Software Development)
+      from Swami Premanand Mahavidyalaya, affiliated with Punjab University Chandigarh.
+      I have a strong interest in web development and software engineering.
+    </p>
+    <p>
+      As a fresher, I am eager to apply my skills in HTML, CSS, JavaScript, and PHP
+      to contribute to dynamic IT projects. I enjoy learning new technologies
+      and am always ready to take on new challenges to grow professionally.
+    </p>
+    <p>
+      I'm looking forward to starting my career in a growth-oriented organization where I can
+      use my technical and problem-solving skills to make a positive impact.
+    </p>
+  </div>
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-7xl font-extrabold mb-8">Skills</h3>
+            <p class="mb-12">Here are some of the technologies I specialize in:</p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <div
+                    class="border border-black px-6 py-6 rounded-lg flex flex-col items-center w-40 hover:scale-105 transition-transform duration-300 ease-in-out">
+                    <i class="fab fa-html5 text-4xl mb-4"></i>
+                    <span class="font-semibold">HTML</span>
+                </div>
+               <div
+                    class="border border-black px-6 py-6 rounded-lg  flex flex-col items-center w-40 hover:scale-105 transition-transform duration-300 ease-in-out">
+                    <i class="fab fa-css3 text-4xl mb-4"></i>
+                    <span class="font-semibold">CSS</span>
+                </div>
+                <div
+                    class="border border-black px-6 py-6 rounded-lg  flex flex-col items-center w-40 hover:scale-105 transition-transform duration-300 ease-in-out">
+                    <i class="fas fa-solid  fa-code text-4xl mb-4"></i>
+                    <span class="font-semibold">code</span>    
+                </div>
+                <div
+                    class="border border-black px-6 py-6 rounded-lg  flex flex-col items-center w-40 hover:scale-105 transition-transform duration-300 ease-in-out">
+                    <i class="fab fa-js text-4xl mb-4"></i>
+                    <span class="font-semibold">JavaScript</span>
+                </div>    
+            </div>
+    </section>
+    <!-- Appreciation Section -->
+    <section id="appreciation" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-7xl font-extrabold mb-8"> Thank you </h3>
+
+
+    <!-- FAQ Section -->
+   
+             
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="py-6 text-center">
+        <p>&copy; 2025 RAJAT RANA. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleFAQ(id) {
+            var faq = document.getElementById('faq' + id);
+            faq.classList.toggle('hidden');
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.querySelector("form");
+            const submitButton = form.querySelector("input[type='submit']");
+
+            // Create modal structure
+            const modal = document.createElement("div");
+            modal.classList.add(
+                "fixed", "inset-0", "flex", "items-center", "justify-center",
+                "bg-black", "bg-opacity-50", "hidden", "z-50"
+            );
+            modal.innerHTML = `
+        <div class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg w-full max-w-lg relative">
+            <button id="closeModal" class="absolute top-2 right-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">&times;</button>
+            <div id="modalContent" class="text-gray-900 dark:text-white"></div>
+        </div>
+    `;
+            document.body.appendChild(modal);
+
+            const modalContent = document.getElementById("modalContent");
+            const closeModalBtn = document.getElementById("closeModal");
+
+            // Function to open the modal
+            function openModal(content) {
+                modalContent.innerHTML = content;
+                modal.classList.remove("hidden");
+            }
+
+            // Function to close the modal
+            function closeModal() {
+                modal.classList.add("hidden");
+            }
+
+            // Close modal on button click or outside click
+            closeModalBtn.addEventListener("click", function () {
+                closeModal();
+                form.reset(); // Reset the form
+            });
+            modal.addEventListener("click", function (event) {
+                if (event.target === modal) {
+                    closeModal();
+                    form.reset(); // Reset the form
+                }
+            });
+
+            form.addEventListener("submit", async function (event) {
+                event.preventDefault(); // Prevent page reload
+
+                // Show loading animation
+                submitButton.disabled = true;
+                submitButton.value = "Processing...";
+                submitButton.classList.add("opacity-50", "cursor-not-allowed");
+
+                // Add a spinner icon
+                submitButton.insertAdjacentHTML("afterbegin", `<span class="animate-spin mr-2">⏳</span>`);
+
+                const formData = new FormData(form);
+                const jsonData = {};
+                formData.forEach((value, key) => {
+                    jsonData[key] = value;
+                });
+
+                try {
+                    const response = await fetch("https://hook.eu1.make.com/gftiel5w3mf7iu8dbt8lsdd8tzgcgmva", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(jsonData)
+                    });
+
+                    let responseText = await response.text();
+                    if (responseText == "Accepted") {
+                        openModal(`<p class="text-red-500">Something went wrong. Please try again later.</p>`);
+                    } else {
+                        responseText = responseText.replace(/```html|```/g, "").trim();
+                        openModal(responseText);
+                    }
+                } catch (error) {
+                    openModal(`<p class="text-red-500">Something went wrong. Please try again later.</p>`);
+                }
+
+                // Reset button state after processing
+                submitButton.disabled = false;
+                submitButton.innerHTML = "Send Message";
+                submitButton.classList.remove("opacity-50", "cursor-not-allowed");
+            });
+        });
+    </script>
+</body>
+
+</html>
